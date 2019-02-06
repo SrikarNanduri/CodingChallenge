@@ -1,4 +1,4 @@
-package Days;
+package DaysJava;
 
 import java.util.Scanner;
 
@@ -21,6 +21,7 @@ public class Day1FizzBuzz {
 
         public static void main(String[] args){
             Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter range");
             int n = scanner.nextInt();
             fizzBuzz(n);
         }
