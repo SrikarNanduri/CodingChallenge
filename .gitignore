@@ -117,3 +117,4 @@ fastlane/readme.md
 .idea/vcs.xml
 src/main/resources/
 src/test/
+out\
