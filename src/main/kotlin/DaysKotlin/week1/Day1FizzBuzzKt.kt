@@ -1,4 +1,4 @@
-package DaysKotlin
+package DaysKotlin.week1
 
 import java.util.*
 
@@ -7,7 +7,7 @@ fun main(args: Array<String>){
         val reader = Scanner(System.`in`)
         print("Enter the range: ")
         val range: Int = reader.nextInt()
-        fizzBuzz(range)
+    fizzBuzz(range)
 
     }
 

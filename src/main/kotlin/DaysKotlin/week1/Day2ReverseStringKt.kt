@@ -1,4 +1,4 @@
-package DaysKotlin
+package DaysKotlin.week1
 
 import java.util.*
 
