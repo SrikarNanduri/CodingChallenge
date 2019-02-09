@@ -8,7 +8,7 @@ public class Day3HammingDistance {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first String: ");
         String firstString = scanner.nextLine();
-        System.out.println("Enter second string of same length: ");
+        System.out.println("Enter second string of same length as first string: ");
         String secondString = scanner.nextLine();
 
         if (firstString.length() != secondString.length()) {
