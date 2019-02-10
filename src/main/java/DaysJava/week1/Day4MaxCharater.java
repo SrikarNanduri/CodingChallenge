@@ -21,7 +21,7 @@ public class Day4MaxCharater {
             }
             System.out.println(map);
             Character key = map.entrySet().stream().max((o1, o2) -> o1.getValue() > o2.getValue()? 1 : -1).get().getKey();
-            System.out.println("The max occuring charater is " + key + " and no of time it occured is " + map.get(key));
+            System.out.println("The max occuring charater is " + key + " and it appeared " + map.get(key) + "times");
         }
 
         public static void main(String[] args) {

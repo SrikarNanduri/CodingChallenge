@@ -24,5 +24,5 @@ val reader = Scanner(System.`in`)
     println(map)
     val key = map.maxBy { it.value }!!.key
     var value =  map[key]
-    println("The max occuring charater is $key and no of time it occured is $value")
+    println("The max occuring charater is $key and it appeared $value times")
 }
