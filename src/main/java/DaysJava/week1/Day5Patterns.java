@@ -4,10 +4,25 @@ import java.util.Scanner;
 
 public class Day5Patterns {
     public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
         Day5Patterns patterns = new Day5Patterns();
         System.out.println("Enter the number of lines to print:");
-        int n = new Scanner(System.in).nextInt();
-        patterns.pattern2(n);
+        int n = scanner.nextInt();
+        System.out.println("Select a pattern number:");
+        switch (scanner.nextInt()){
+            case 1 :
+                patterns.pattern1(n);
+                break;
+            case 2 :
+                patterns.pattern2(n);
+                break;
+            case 3 :
+                patterns.pattern3(n);
+                break;
+
+                default:
+                    System.out.println("Select a valid pattern number");
+        }
     }
 
 
