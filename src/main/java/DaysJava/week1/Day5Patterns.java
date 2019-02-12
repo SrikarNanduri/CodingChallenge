@@ -19,6 +19,21 @@ public class Day5Patterns {
             case 3 :
                 patterns.pattern3(n);
                 break;
+            case 4 :
+                patterns.pattern4(n);
+                break;
+            case 5 :
+                patterns.pattern5(n);
+                break;
+            case 6 :
+                patterns.pattern6(n);
+                break;
+            case 7 :
+                patterns.pattern7(n);
+                break;
+            case 8 :
+                patterns.pattern8(n);
+                break;
 
                 default:
                     System.out.println("Select a valid pattern number");
@@ -62,5 +77,46 @@ public class Day5Patterns {
             System.out.println();
         }
     }
+
+    private void pattern4(int n){
+
+        int i, j;
+        for (i=1; i<=n; i++) {
+            // Print left white spaces
+            for (j=n; j>i; j--) {
+                System.out.print("  ");
+            }
+
+            // Print the numbers
+            for (j=i; j<=(2*i-1); j++) {
+                System.out.print(j + " ");
+            }
+
+            //print right white spaces
+            for (j=(2*i-1) - 1; j>=i; j--) {
+                System.out.print(j + " ");
+            }
+
+            System.out.println("");
+        }
+    }
+
+    private void pattern5(int n){
+
+    }
+
+    private void pattern6(int n){
+
+    }
+
+    private void pattern7(int n){
+
+    }
+
+
+    private void pattern8(int n){
+
+    }
+
 
 }
