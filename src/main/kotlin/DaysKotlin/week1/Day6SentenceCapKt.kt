@@ -9,12 +9,10 @@ println("Enter the sentence to capitalize: ")
 }
 
 fun sentenceCapitalization(sentence: String){
-        var splitSentence = sentence.split(" ").toMutableList()
+    val splitSentence = sentence.split(" ").toMutableList()
     var capitalizeSentence = ""
         for(i in splitSentence){
             capitalizeSentence +=i.capitalize() + " "
         }
-    capitalizeSentence.trim()
-
     print(capitalizeSentence)
 }
