@@ -6,7 +6,7 @@ fun main(){
     val reader = Scanner(System.`in`)
     println("Enter first String:")
     val s1 = reader.nextLine()
-    println("Enter first String:")
+    println("Enter second String:")
     val s2 = reader.nextLine()
     oneEditAway(s1, s2)
 }

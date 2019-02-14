@@ -80,4 +80,7 @@ fun pattern4(rows :Int){
         count1 = count
         println()
     }
+
+
+    //TODO: need to complete writing other patterns.
 }

@@ -101,6 +101,8 @@ public class Day5Patterns {
         }
     }
 
+    //TODO: need to complete writing other patterns.
+
     private void pattern5(int n){
 
     }
