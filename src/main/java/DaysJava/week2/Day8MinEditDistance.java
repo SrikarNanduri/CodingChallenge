@@ -15,5 +15,25 @@ public class Day8MinEditDistance {
 
     private void minEditDistance(String s1, String s2){
 
+        int length;
+        int count = 0;
+        char [] s1Char = s1.toUpperCase().toCharArray();
+        char [] s2Char = s2.toUpperCase().toCharArray();
+
+        if(s1.length() > s2.length()){
+            length = s1.length();
+        } else if(s1.length() < s2.length()){
+            length = s2.length();
+        } else {
+            length = s1.length();
+        }
+        System.out.println(length);
+        for(int i =0; i < length ; i++){
+                if (s1Char[i] != s2Char[i]) {
+                    s1Char[i] = s2Char[i];
+                    count++;
+                }
+        }
+        System.out.println(s1 + " is converted to " + s2 + " and it took " + count + " steps to complete it now s1 is " + String.valueOf(s1Char));
     }
 }
