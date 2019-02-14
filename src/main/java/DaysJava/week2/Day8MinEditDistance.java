@@ -1,6 +1,10 @@
 package DaysJava.week2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Day8MinEditDistance {
     public static void main(String [] args){
@@ -16,24 +20,34 @@ public class Day8MinEditDistance {
     private void minEditDistance(String s1, String s2){
 
         int length;
+        int difference = Math.abs(s1.length() - s2.length());
         int count = 0;
-        char [] s1Char = s1.toUpperCase().toCharArray();
-        char [] s2Char = s2.toUpperCase().toCharArray();
+        List<Character> reverse = new ArrayList<>();
+        List<Character> s1Char = s1.toUpperCase().chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        List<Character> s2Char = s2.toUpperCase().chars().mapToObj(e -> (char)e).collect(Collectors.toList());
 
         if(s1.length() > s2.length()){
-            length = s1.length();
-        } else if(s1.length() < s2.length()){
             length = s2.length();
+        } else if(s1.length() < s2.length()){
+            length = s1.length();
         } else {
             length = s1.length();
         }
         System.out.println(length);
         for(int i =0; i < length ; i++){
-                if (s1Char[i] != s2Char[i]) {
-                    s1Char[i] = s2Char[i];
+                if (s1Char.get(i) != s2Char.get(i)) {
+                    s1Char.set(i, s2Char.get(i));
                     count++;
                 }
         }
-        System.out.println(s1 + " is converted to " + s2 + " and it took " + count + " steps to complete it now s1 is " + String.valueOf(s1Char));
+
+        for(int j = length + difference; j > length; j --){
+           reverse.add(s2Char.get(j-1));
+            count++;
+        }
+        Collections.reverse(reverse);
+        s1Char.addAll(reverse);
+        String str = s1Char.stream().map(Object::toString).collect(Collectors.joining());
+        System.out.println(s1 + " is converted to " + s2 + " and it took " + count + " steps to complete it now s1 is " + str);
     }
 }
