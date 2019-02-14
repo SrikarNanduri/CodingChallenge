@@ -34,16 +34,22 @@ public class Day8MinEditDistance {
             length = s1.length();
         }
         System.out.println(length);
-        for(int i =0; i < length ; i++){
+        boolean isS1Greater = length == s2.length() && length < s1.length();
+        for(int i = 0; i < length ; i++){
                 if (s1Char.get(i) != s2Char.get(i)) {
                     s1Char.set(i, s2Char.get(i));
                     count++;
                 }
+                if(isS1Greater){
+                    s1Char.subList(length, s1Char.size()).clear();
+                    break;
+                }
         }
-
-        for(int j = length + difference; j > length; j --){
-           reverse.add(s2Char.get(j-1));
-            count++;
+        if(!isS1Greater) {
+            for (int j = length + difference; j > length; j--) {
+                reverse.add(s2Char.get(j - 1));
+                count++;
+            }
         }
         Collections.reverse(reverse);
         s1Char.addAll(reverse);
