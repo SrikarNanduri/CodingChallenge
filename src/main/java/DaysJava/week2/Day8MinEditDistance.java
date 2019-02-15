@@ -23,8 +23,8 @@ public class Day8MinEditDistance {
         int difference = Math.abs(s1.length() - s2.length());
         int count = 0;
         List<Character> reverse = new ArrayList<>();
-        List<Character> s1Char = s1.toUpperCase().chars().mapToObj(e -> (char)e).collect(Collectors.toList());
-        List<Character> s2Char = s2.toUpperCase().chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        List<Character> s1Char = s1.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
+        List<Character> s2Char = s2.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
 
         if(s1.length() > s2.length()){
             length = s2.length();
@@ -40,10 +40,10 @@ public class Day8MinEditDistance {
                     s1Char.set(i, s2Char.get(i));
                     count++;
                 }
-                if(isS1Greater){
-                    s1Char.subList(length, s1Char.size()).clear();
-                    break;
-                }
+        }
+
+        if(isS1Greater){
+            s1Char.subList(length, s1Char.size()).clear();
         }
         if(!isS1Greater) {
             for (int j = length + difference; j > length; j--) {
