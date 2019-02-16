@@ -1,5 +1,8 @@
 package DaysJava.week2;
 
+import com.google.common.collect.Multimap;
+import com.google.common.collect.TreeMultimap;
+
 import java.util.Scanner;
 
 public class Day9SmallestSubStringProblem {
@@ -18,5 +21,15 @@ public class Day9SmallestSubStringProblem {
 
     private static void smallestSubString(char[] chars, String string ){
 
+        char[] stringArray = string.toLowerCase().toCharArray();
+        Multimap<Character, Integer> indexes = TreeMultimap.create();
+        for (char aChar : chars) {
+            for (int j = 0; j < string.length(); j++) {
+                if (aChar == stringArray[j]) {
+                    indexes.put(aChar, j);
+                }
+            }
+        }
+        System.out.println(indexes);
     }
 }
