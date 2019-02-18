@@ -25,10 +25,7 @@ public class Day9SmallestSubStringProblem {
             if(s.contains(str.substring(i,i+1)))
                 k++;
         }
-        if(k==c.length)
-            return true;
-        else
-            return false;
+        return k == c.length;
     }
 
     private static void generate(String str, char c[]) {
