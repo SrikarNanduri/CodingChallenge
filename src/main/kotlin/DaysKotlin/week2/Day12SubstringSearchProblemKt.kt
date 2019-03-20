@@ -12,7 +12,7 @@ fun main(){
     val string = reader.nextLine()
     println("Enter a substring to find if present inside the given string:")
     val substring = reader.nextLine()
-    //println("General Method - substring exists and is at position " + substringSearchProblem(string, substring))
+    println("General Method - substring exists and is at position " + substringSearchProblem(string, substring))
     bruteForce(string, substring)
 }
 
