@@ -22,7 +22,7 @@ public class Day12SubstringSearchProblem {
     }
 
     private static void bruteForceApproach(String string, String substring){
-        String str; int position = -1;
+       int position = -1;
         for(int i =0; i < string.length(); i++){
           if(string.charAt(i) == substring.charAt(0)){
               for(int j =1; j < substring.length(); j++){
