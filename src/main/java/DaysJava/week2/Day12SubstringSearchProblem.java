@@ -36,6 +36,14 @@ public class Day12SubstringSearchProblem {
           }
         }
         System.out.println("Brute Force - substring exists and is at position " + position);
+    }
+
+
+    private static void KnuthMorrisPrattApproach(String string, String substring){
+
+        int StringLenght = string.length();
+        int substringLength =substring.length();
+
 
     }
 
