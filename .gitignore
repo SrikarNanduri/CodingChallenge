@@ -93,3 +93,7 @@ fastlane/readme.md
 src/main/resources/
 src/test/
 out\
+/.idea/modules/
+/.idea/misc.xml
+/.idea/uiDesigner.xml
+.idea/codeStyles/
